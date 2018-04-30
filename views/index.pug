@@ -1,5 +1,58 @@
+mixin menu
+    nav
+        ul
+            li
+                a(href='#') Home
+            li
+                a(href='#') About Us
+            li
+                a(href='#') Contact
+mixin menuLateral
+    aside
+        h4 título
+        nav
+            ul
+                li
+                    a(href='#') Lorem
+                li
+                    a(href='#') Empsum
+                    ul
+                        li
+                            a(href='#') Lorem2
+                        li
+                            a(href='#') Empsum2
+                li
+                    a(href='#') Dolor
+                li
+                    a(href='#') Dolor
+mixin midleFigureCaption
+    figure
+        img(src="./images/lago.jpg" alt="Lake")
+        figcaption
+            p lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor.
+    figure
+        img(src="./images/ponte.jpg" alt="Way")
+        figcaption
+            p lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor.
+doctype html
 html
     head
         title= title
     body
-        h1= message
+        main
+            header                
+                +menu
+                section
+                    figure
+                        img(src="./images/banner2.jpg" alt="Banner - Lake" width='100%')
+            section#midle
+                +midleFigureCaption
+                +menuLateral
+            div#smallPicture
+                img(src="./images/montains.jpg" alt="Montains")
+                img(src="./images/montains2.jpg" alt="Montains")
+                img(src="./images/telhado.jpg" alt="Hoof")
+            footer
+                p lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor.
+            footer#direitos
+                p Todos os direitos reservados a Edwin Lima.
