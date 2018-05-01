@@ -1,5 +1,5 @@
 mixin menu
-    nav
+    nav.menu-horizontal
         ul
             li
                 a(href='#') Home
@@ -8,8 +8,8 @@ mixin menu
             li
                 a(href='#') Contact
 mixin menuLateral
-    aside
-        h4 título
+    aside.menu-lateral
+        h3 título
         nav
             ul
                 li
@@ -37,7 +37,9 @@ mixin midleFigureCaption
 doctype html
 html
     head
-        title= title
+        title BelaVista
+        link(rel='stylesheet' href='./css/normalize.css')
+        link(rel='stylesheet' href='./css/style.css')
     body
         main
             header                
@@ -49,10 +51,19 @@ html
                 +midleFigureCaption
                 +menuLateral
             div#smallPicture
-                img(src="./images/montains.jpg" alt="Montains")
-                img(src="./images/montains2.jpg" alt="Montains")
-                img(src="./images/telhado.jpg" alt="Hoof")
-            footer
-                p lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor.
+                figure
+                    img(src="./images/montains.jpg" alt="Montains")
+                figure
+                    img(src="./images/montains2.jpg" alt="Montains")
+                figure
+                    img(src="./images/telhado.jpg" alt="Hoof")
+                figure
+                    img(src="./images/lago.jpg" alt="Lake")
+            footer.container
+                div.container
+                    p lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor.
+                    p lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor.
+                    p lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor.
+                    p lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor lorem empsum dolor.
             footer#direitos
-                p Todos os direitos reservados a Edwin Lima.
+                p Copyright (c) 2018. All right reserved Edwin Lima.
